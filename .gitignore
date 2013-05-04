@@ -3,3 +3,7 @@
 *.class
 *.swp
 .vagrant/
+selenium/log.html
+selenium/report.html
+selenium/output.xml
+vm/selenium
