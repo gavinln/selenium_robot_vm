@@ -61,7 +61,7 @@ Running
 
 7. The [Firefox][9] browser outside the VM will start and run the tests
 
-7. The /vagrant/selenium/report.html has the test results
+7. The <code>/vagrant/selenium/report.html</code> file has the test results
 
 8. To exit type "exit" or Ctrl+C
 
