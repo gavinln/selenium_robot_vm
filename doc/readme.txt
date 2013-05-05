@@ -16,18 +16,12 @@ Go to http://localhost:4444/
 5. From outside the VM start the Selenium node ("INFO - Done: /status" is displayed)
 vm\start_node.bat
 
-6. Within the VM run the Selenium tests
+6. In the VM in /vagrant/selenium diretory run the selenium tests
 pybot tests/cnn_home.txt
 
-7. In the project root outside the VM start the node
-python vm\start_node.py
+7. The /vagrant/selenium/report.html has the test results
 
-8. In the VM in /vagrant/selenium diretory run the selenium tests
-pybot tests/cnn_home.txt
-
-9. The /vagrant/selenium/report.html has the test results
-
-10. To exit type "exit" or Ctrl+C
+8. To exit type "exit" or Ctrl+C
 
 
 
