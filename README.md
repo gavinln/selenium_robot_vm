@@ -9,11 +9,7 @@ selenium_robot_vm
 About
 -----
 
-This project provides a [Ubuntu (12.0)][2] [Vagrant][3] Virtual Machine (VM) with [Selenium][4] and the [Robot Framework][5] for web browser based tests.
-
-There are [Puppet][6] scripts that automatically install the software when the VM is started.
-
-There are scripts that start the [Selenium hub][7] and nodes
+This project provides a [Ubuntu (12.0)][2] [Vagrant][3] Virtual Machine (VM) with [Selenium][4] and the [Robot Framework][5] for web browser based tests. The project contains [Puppet][6] scripts that automatically install the software when the VM is started. It also has scripts that start the [Selenium hub][7] and nodes
 
 [2]: http://releases.ubuntu.com/precise/
 [3]: http://www.vagrantup.com/
