@@ -5,13 +5,13 @@ class selenium {
     $DIR_SELENIUM = "$PROJ_DIR/vm/selenium"
     case $operatingsystem {
         ubuntu: {
-            file { "$SELENINUM_DIR":
+            file { "$DIR_SELENIUM":
                 ensure => "directory",
             }
             exec { "download_selenium_standalone":
-                command => "curl -o $SELENINUM_DIR/$JAR_SELENIUM $URL_SELENIUM",
-                unless  => "test -f $SELENINUM_DIR/$JAR_SELENIUM",
-                require => File["$SELENINUM_DIR"]
+                command => "curl -o $DIR_SELENIUM/$JAR_SELENIUM $URL_SELENIUM",
+                unless  => "test -f $DIR_SELENIUM/$JAR_SELENIUM",
+                require => File["$DIR_SELENIUM"]
             }
         }
     }
