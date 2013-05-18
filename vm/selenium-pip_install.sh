@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# go to  and find a fast mirror
+# go to http://www.pypi-mirrors.org/ and find a fast mirror
 ROOT=`dirname $0`
 REQUIREMENTS_DIR=$ROOT/../puppet/requirements
 MIRROR=http://g.pypi.python.org/simple

@@ -2,15 +2,15 @@
 class robot_jar {
     $JAR_ROBOT = "robotframework-2.7.7.jar"
     $URL_ROBOT = "http://robotframework.googlecode.com/files/$JAR_ROBOT"
-    $DIR_ROBOT = "$PROJ_DIR/vm/selenium"
+    $DIR_JARS = "$PROJ_DIR/vm/jars"
     case $operatingsystem {
         ubuntu: {
-            file { "$PROJ_DIR/vm/robot":
+            file { "$DIR_JARS":
                 ensure => "directory",
             }
             exec { "download_robot_standalone":
-                command => "curl -o $PROJ_DIR/vm/robot/$JAR_ROBOT $URL_ROBOT",
-                unless  => "test -f $PROJ_DIR/vm/robot/$JAR_ROBOT",
+                command => "curl -o $DIR_JARS/$JAR_ROBOT $URL_ROBOT",
+                unless  => "test -f $DIR_JARS/$JAR_ROBOT",
                 require => File["$PROJ_DIR/vm/robot"]
             }
         }
