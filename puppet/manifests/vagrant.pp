@@ -13,9 +13,10 @@ Exec {
 class dev {
     class {
         init: ;
+        robot: require => Class[init];
         java: require => Class[init];
-        robot: require => Class[java];
-        custom: require => Class[init];
+        robot_jar: require => Class[java];
+        selenium: require => Class[init];
     }
 }
 

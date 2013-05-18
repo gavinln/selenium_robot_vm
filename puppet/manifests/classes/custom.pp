@@ -6,11 +6,4 @@ class custom {
         command => "curl -o $PROJ_DIR/vm/selenium/$SELENIUM_JAR $SELENIUM_URL",
         unless  => "test -f $PROJ_DIR/vm/selenium/$SELENIUM_JAR",
     }
-#	No need to create a script as one will be saved in git
-#    file { "$HOME_DIR/start_hub.sh":
-#        content => "#!/bin/bash\n\njava -jar $SELENIUM_JAR -role hub\n",
-#        ensure => "present",
-#        mode => "0755",
-#        require => Exec["download_selenium_standalone"],
-#    }
 }
