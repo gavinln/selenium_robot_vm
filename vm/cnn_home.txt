@@ -9,7 +9,7 @@ ${HUB_URL}  http://localhost:4444/wd/hub
 
 *** Keywords ***
 Open page  [Arguments]  ${url}
-    Open Browser  ${url}  ${BROWSER_NAME}  alias=${EMPTY}  remote_url=${HUB_URL}
+    Open Browser  ${url}  ${BROWSER_NAME}
 
 Find term using search engine  [Arguments]  ${searchTerm}
 #    Wait Unit Page Contains Element  p
