@@ -5,11 +5,12 @@ Library     Selenium2Library
 
 *** Variables ***
 ${BROWSER_NAME}  firefox
-${HUB_URL}  http://localhost:4444/wd/hub
+${HUB_URL}  http://127.0.0.1:4444/wd/hub
 
 *** Keywords ***
 Open page  [Arguments]  ${url}
-    Open Browser  ${url}  ${BROWSER_NAME}
+    #Open Browser  ${url}  ${BROWSER_NAME}
+    Open Browser  ${url}  ${BROWSER_NAME}  ${EMPTY}  ${HUB_URL}
 
 Find term using search engine  [Arguments]  ${searchTerm}
 #    Wait Unit Page Contains Element  p

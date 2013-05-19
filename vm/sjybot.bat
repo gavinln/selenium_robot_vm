@@ -6,6 +6,8 @@ set JAR_DIR=%ROOT%jars
 set CLASSPATH=%JAR_DIR%\robotframework-selenium2library-java-1.2.0.3-jar-with-dependencies.jar
 REM set CLASSPATH=%CLASSPATH%;%JAR_DIR%robotframework-2.7.7.jar
 
-java -cp %CLASSPATH% org.robotframework.RobotFramework cnn_home.txt
-REM java -cp %CLASSPATH% org.python.util.jython
+echo. | time
+REM java -cp %CLASSPATH% org.robotframework.RobotFramework cnn_home.txt
+java -cp %CLASSPATH% org.python.util.jython sjybot_cmd.py
+echo. | time
 
