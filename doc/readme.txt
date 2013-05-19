@@ -24,4 +24,10 @@ pybot tests/cnn_home.txt
 8. To exit type "exit" or Ctrl+C
 
 
+# supporting xvfb
+# Install
+sudo apt-get install firefox
+sudo apt-get install xvfb
+
+
 

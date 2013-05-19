@@ -10,6 +10,7 @@ def here():
     50 seconds
         10 seconds to load jars
         40 seconds to open browser to CNN (10 seconds less subsequent times)
+    Need to be able to select LINUX or WINDOWS
 '''
 class HelloWorld(cmd.Cmd):
     """Simple command processor example."""
@@ -19,6 +20,12 @@ class HelloWorld(cmd.Cmd):
         RobotFramework.run([os.path.join(here(), 'cnn_home.txt')])
         elapsedTime = time.time() - startTime
         print "elapsed time = %s" % elapsedTime
+
+    def do_clear(self, line):
+        fileName = os.path.join(here(), 'output.xml')
+        if os.path.exists(fileName):
+            print 'removed file: %s' % fileName
+            os.remove(fileName)
 
     def do_exit(self, line):
         return True
