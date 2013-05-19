@@ -1,0 +1,28 @@
+*** Settings ***
+Documentation  Documentation goes here
+Library     OperatingSystem
+Library     Selenium2Library
+
+*** Variables ***
+${BROWSER_NAME}  firefox
+${HUB_URL}  http://localhost:4444/wd/hub
+
+*** Keywords ***
+Open page  [Arguments]  ${url}
+    Open Browser  ${url}  ${BROWSER_NAME}  alias=${EMPTY}  remote_url=${HUB_URL}
+
+Find term using search engine  [Arguments]  ${searchTerm}
+#    Wait Unit Page Contains Element  p
+    Input Text  p  ${searchTerm}
+    Click Button  search-submit
+
+Verify search results
+    Page Should Contain Element  //a[contains(@href,'http://seleniumhq.org')]
+
+*** Test Cases ***
+Search using CNN 
+    Log  ${BROWSER_NAME}  level=TRACE
+    Open page  http://www.cnn.com
+    #Find term using search engine  seleniumhq
+    #Verify search results
+    Close Browser
