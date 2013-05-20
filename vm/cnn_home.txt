@@ -8,7 +8,7 @@ ${BROWSER_NAME}  firefox
 ${HUB_URL}  http://127.0.0.1:4444/wd/hub
 # DC - desired capabilities: key1:value1,key2:value2
 #${DC}  platform:LINUX
-${DC}  platform:WINDOWS
+${DC}  platform:%{SELENIUM_TEST_OS}
 
 *** Keywords ***
 Open page  [Arguments]  ${url}
