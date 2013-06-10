@@ -29,5 +29,11 @@ pybot tests/cnn_home.txt
 sudo apt-get install firefox
 sudo apt-get install xvfb
 
+List of jars
+guava-14.0.jar
+httpclient-4.2.1.jar
+httpcore-4.2.1.jar
+json-20080701.jar
+selenium-server-2.33.0.jar
 
 
