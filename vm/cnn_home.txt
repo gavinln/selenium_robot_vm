@@ -8,13 +8,13 @@ ${BROWSER_NAME}  firefox
 ${HUB_URL}  http://127.0.0.1:4444/wd/hub
 # DC - desired capabilities: key1:value1,key2:value2
 #${DC}  platform:LINUX
-${DC}  platform:%{SELENIUM_TEST_OS}
+#${DC}  platform:%{SELENIUM_TEST_OS}
 
 *** Keywords ***
 Open page  [Arguments]  ${url}
     #Open Browser  ${url}  ${BROWSER_NAME}
-    #Open Browser  ${url}  ${BROWSER_NAME}  ${EMPTY}  ${HUB_URL}
-    Open Browser  ${url}  ${BROWSER_NAME}  ${EMPTY}  ${HUB_URL}  ${DC}
+    Open Browser  ${url}  ${BROWSER_NAME}  ${EMPTY}  ${HUB_URL}
+    #Open Browser  ${url}  ${BROWSER_NAME}  ${EMPTY}  ${HUB_URL}  ${DC}
 
 Find term using search engine  [Arguments]  ${searchTerm}
 #    Wait Unit Page Contains Element  p
@@ -25,7 +25,7 @@ Verify search results
     Page Should Contain Element  //a[contains(@href,'http://seleniumhq.org')]
 
 *** Test Cases ***
-Search using CNN 
+Search using CNN
     Log  ${BROWSER_NAME}  level=TRACE
     Open page  http://www.cnn.com
     #Find term using search engine  seleniumhq

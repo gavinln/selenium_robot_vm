@@ -53,10 +53,11 @@ Running
     vm/start_node.sh
     ```
 
-6. Within the VM run the Selenium tests in the /vagrant/selenium directory
+6. Within the VM run the Selenium tests in the /vagrant/vm directory
 
     ```bash
-    pybot tests/cnn_home.txt
+    cd /vagrant/vm
+    pybot cnn_home.txt
     ```
 
 7. The [Firefox][9] browser outside the VM will start and run the tests
