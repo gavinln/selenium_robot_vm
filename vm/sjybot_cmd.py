@@ -21,6 +21,8 @@ def setSeleniumTestOS(name):
     os.environ[seleniumTestOS] = name
     return name
 
+def getSeleniumTestOS():
+    return os.environ[seleniumTestOS]
 
 set_options = {
     'platform': ['linux', 'windows'],
@@ -53,8 +55,11 @@ class SeleniumJybot(cmd.Cmd):
     def do_set(self, line):
         '''set
         sets options for running tests'''
+        platformIdx = line.find('=')
+        if platformIdx >= 0:
+            setSeleniumTestOS(line[platformIdx + 1:])
         print '%s=%s' % (seleniumTestOS,
-                         setSeleniumTestOS('LINUX'))
+                         getSeleniumTestOS())
 
     def complete_set(self, text, line, start_index, end_index):
         def get_re1_match(text, options):

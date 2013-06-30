@@ -9,8 +9,8 @@ CLASSPATH=$JAR_DIR/robotframework-selenium2library-java-1.2.0.3-jar-with-depende
 
 T1=$(date +%s)
 
-#java -cp $CLASSPATH org.robotframework.RobotFramework $DIRNAME/cnn_home.txt
-java -cp $CLASSPATH org.python.util.jython $DIRNAME/sjybot_cmd.py
+java -cp $CLASSPATH org.robotframework.RobotFramework $DIRNAME/cnn_home.txt
+#java -cp $CLASSPATH org.python.util.jython $DIRNAME/sjybot_cmd.py
 
 T2=$(date +%s)
 echo $(expr $T2 - $T1)
